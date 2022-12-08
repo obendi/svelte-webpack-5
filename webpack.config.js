@@ -2,8 +2,6 @@ const path = require('path')
 
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const TerserPlugin = require('terser-webpack-plugin');
 const WebpackBar = require('webpackbar')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
@@ -26,7 +24,7 @@ module.exports = {
     mode,
 
     devtool: prod ? false : 'source-map',
-    
+
     devServer: {
         static: {
             directory: path.resolve(__dirname, './public'),
